@@ -6,4 +6,4 @@ app.get("/",function (req,res){
 })
 
 app.listen(5000);
-console.log("dcd");
+

@@ -1,18 +1,18 @@
 //video-controller
-export const home = (req,res) => res.send("Home");
-export const search = (req,res) => res.send("search");
-export const videos = (req,res) => res.send("videos");
-export const upload = (req,res) => res.send("upload");
-export const videoDetail = (req,res) => res.send("videoDetail");
-export const editVideo = (req,res) => res.send("editVideo");
-export const deleteVideo = (req,res) => res.send("deleteVideo");
+export const home = (req,res) => res.render("home");
+export const search = (req,res) => res.render("search");
+export const videos = (req,res) => res.render("videos");
+export const upload = (req,res) => res.render("upload");
+export const videoDetail = (req,res) => res.render("videoDetail");
+export const editVideo = (req,res) => res.render("editVideo");
+export const deleteVideo = (req,res) => res.render("deleteVideo");
 
 //user-controller
-export const join = (req,res) => res.send("join");
-export const login = (req,res) => res.send("login");
-export const logout = (req,res) => res.send("logout");
-export const users = (req,res) => res.send("users");
-export const userDetail = (req,res) => res.send("userDetails");
-export const editProfile = (req,res) => res.send("editProfile");
-export const changePassword = (req,res) => res.send("changePassword");
+export const join = (req,res) => res.render("join");
+export const login = (req,res) => res.render("login");
+export const logout = (req,res) => res.render("logout");
+export const users = (req,res) => res.render("users");
+export const userDetail = (req,res) => res.render("userDetail");
+export const editProfile = (req,res) => res.render("editProfile");
+export const changePassword = (req,res) => res.render("changePassword");
 

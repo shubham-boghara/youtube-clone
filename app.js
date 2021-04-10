@@ -10,7 +10,8 @@ import routes from "./routes";
 import {localsMiddleware} from "./middleware";
 import path from "path"; 
 const app = express()
-const public1 = path.join(__dirname,"public");
+
+
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -18,17 +19,17 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(helmet());
 app.use(morgan("dev"));
 app.set('view engine',"pug");
-
-app.use(express.static(public1));
-
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 
 app.use(localsMiddleware)
 
 
+
 app.use(routes.home,globalRouter);
 app.use(routes.users,userRouter);
 app.use(routes.videos,videoRouter);
+
 
 export default app;
  
